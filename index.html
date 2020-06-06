@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма для мошенничества</title>
+</head>
+<body>
+    <header>
+        <h1 align="center">Осторожно! Не вводите свои данные на других мошеннических сайтах, пока не ввели на нашем!</h1>
+    </header>
+    <hr>
+    <main>
+        <h5>Поля, помеченные *, обязательны для заполнения</h5>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Личные данные</legend>
+                <p>
+                    <input type="text" placeholder="Имя" autofocus required>*
+                    <input type="text" placeholder="Фамилия" required>*
+                    <input type="text" placeholder="Отчество">   
+                </p>
+                <p>
+                    <label for="tel">Телефон: +375</label>
+                    <input type="tel" id="tel" placeholder="(29)123-45-67" required>*   
+                </p>
+                <p>
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="example@gmail.com" required>*
+                    <label for="password">Пароль электронной почты</label>
+                    <input type="password" id="password" required>*  
+                </p>
+                <p>Ваш пол:
+                    <input type="radio" name="sex" checked>мужской
+                    <input type="radio" name="sex">женский
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Данные карты</legend>
+                <p>
+                    <label for="card_number">Номер карты</label>
+                    <input type="number" id="card_number" placeholder="0000 0000 0000 0000" required>*  
+                </p>
+                <p>
+                    <label for="owner">Владелец</label>
+                    <input type="text" id="owner" placeholder="IVAN IVANOV" required>*
+                </p>
+                <p>
+                    <label for="cvv">Код CVV/CVC</label>
+                    <input type="number" id="cvv" placeholder="000" required>*
+                </p>
+                <p>Срок действия карты &nbsp; &nbsp; &nbsp; &nbsp;
+                    <label for="month">Месяц</label>
+                    <input type="number" min="01" max="12" id="month" required>*
+                    <label for="year">Год</label>
+                    <input type="number" min="00" max="99" id="year" required>*
+                </p>
+                <p>
+                    <label for="mother_last_name">Девичья фамилия матери</label>
+                    <input type="tel" id="mother_last_name">
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Квартирные ценности</legend>
+                <p>
+                    <label for="city">Ваш город:</label>
+                    <select id="city" required>
+                        <option value="" disabled>Город</option>
+                        <option value="brest">Брест</option>
+                        <option value="vitebsk">Витебск</option>
+                        <option value="homel">Гомель</option>
+                        <option value="hrodno">Гродно</option>
+                        <option value="minsk">Минск</option>
+                        <option value="mogilev">Могилёв</option>
+                    </select>*
+                </p>
+                <p>
+                    <label for="street">ул.</label>
+                    <input type="text" id="street" required>*
+                    <label for="house_number">д.</label>
+                    <input type="number" id="house_number" min="1" required>*
+                    <label for="apartment">кв.</label>
+                    <input type="number" id="apartment" min="1" required>*
+                </p>
+                <p>Ценности</p>
+                <p><textarea name="money" cols="60" rows="6" placeholder="Опишите как можно подробнее, где конкретно лежат ценности в вашей квартире"></textarea></p>
+            </fieldset>
+            <button type="submit" onclick="confirm('Вы согласны отправить свои данные мошенникам?')">Подтвердить</button>
+            <button type="reset">Очистить</button>
+        </form>
+    </main>
+    <footer>
+        <h3 align="center">Никто не защитит ваших прав :-)</h3>
+    </footer>
+</body>
+</html>
